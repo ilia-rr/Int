@@ -113,7 +113,7 @@ struct Int
         return ans;
     }
 
-    inline Int operator * (int64_t n)
+    inline Int operator * (long long n)
     {
         if (n > bs)
             return *this * int32_t(n / bs) * bs + *this * int32_t(n % bs);
@@ -144,5 +144,6 @@ int32_t main()
 
     cout << c + b << endl;
     cout << c - a << endl;
-    cout << c * 123456789 << endl;
+    cout << b * 1234 << endl;
+    cout << c * 1000000000000ll << endl;
 }

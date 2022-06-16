@@ -37,6 +37,8 @@ struct Int
 
     inline void operator = (string n)
     {
+        bc = 0;
+
         for (int32_t i = n.size() - 1; i >= 0; i -= bd)
         {
             for (int32_t j = max(0, i - bd + 1); j <= i; j++)
@@ -44,6 +46,9 @@ struct Int
         
             bc++;
         }
+
+        while (b[bc - 1] == 0)
+            bc--;
     }
    
     inline Int operator + (Int n)
@@ -159,4 +164,5 @@ int32_t main()
     cout << c - a << endl;
     cout << b * 1234 << endl;
     cout << c * 1000000000000ll << endl;
+    cout << a.Reverse() << endl;
 }

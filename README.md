@@ -8,6 +8,7 @@ Int is a compact and fast big int implementation for non-negative integers in C+
 + \+ operator
 + \- operator
 + \* operator
++ == operator
 + initialization with string
 + ostream support
 + reverse

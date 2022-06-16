@@ -150,6 +150,18 @@ struct Int
 
         return st;
     }
+
+    inline bool operator == (Int n)
+    {
+        if (bc != n.bc)
+            return 0;
+
+        for (int i = 0; i < bc; i++)
+            if (b[i] != n.b[i])
+                return 0;
+
+        return 1;
+    }
 };
 
 int32_t main()
@@ -165,4 +177,5 @@ int32_t main()
     cout << b * 1234 << endl;
     cout << c * 1000000000000ll << endl;
     cout << a.Reverse() << endl;
+    cout << (Int("9876543210") == Int("9876543210")) << endl;
 }

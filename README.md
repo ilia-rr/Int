@@ -10,6 +10,7 @@ Int is a compact and fast big int implementation for non-negative integers in C+
 + \* operator
 + initialization with string
 + ostream support
++ reverse
 + / operator *(soon)*
 + % operator *(soon)*
 + negative integers support *(soon)*

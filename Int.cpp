@@ -6,7 +6,7 @@ const int32_t bn = 1e4, bs = 1e9, bd = 9;
 
 struct Int
 {
-    int32_t b[bn], bc;
+    int32_t b[bn] = {}, bc;
 
     Int()
     {
@@ -119,6 +119,19 @@ struct Int
             return *this * int32_t(n / bs) * bs + *this * int32_t(n % bs);
 
         return *this * int32_t(n);
+    }
+
+    inline Int Reverse()
+    {
+        stringstream strm;
+
+        strm << *this;
+
+        string s = strm.rdbuf()->str();
+
+        reverse(s.begin(), s.end());
+
+        return Int(s); 
     }
 
     friend ostream &operator << (ostream &st, Int n)
